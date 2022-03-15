@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    min-height: 100vh;
+    background: url(backgroud.jpg);
+    overflow: hidden;
+}
+.box{
+    margin: 200px auto;
+    width: 1200px;
+    height: 500px;
+    padding: 20px;
+}
+h1{
+    font-family: 'Dancing Script'; font-size: 50px;
+    font-size: 120px;
+    color: white;
+}
+.conten{
+    width: 400px;
+    height: 100px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.present{
+    position: relative;
+}
+.above-fold{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%,-50%);
+}
+span{
+    position: absolute;
+    pointer-events: none;
+    filter: drop-shadow(0 0 15px rgba(0,0,0.5));
+    animation: fadeInOut 1s linear infinite;
+
+}
+@keyframes fadeInOut {
+    0%,100%{
+        opacity: 0;
+
+    }
+    20%,80%{
+        opacity: 1;
+    }
+}
+span::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url(heart.png);
+    background-size: cover;
+    animation: moveShape 1s linear infinite;
+}
+@keyframes moveShape {
+    0%{
+        transform: translate(0) rotate(0deg);
+    }
+    100%{
+        transform: translate(300px) rotate(360deg);
+        
+    }
+    
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy birthday</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+    rel="stylesheet"> 
+    <link rel="stylesheet" href="present.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fireworks.css">
+</head>
+<body>
+    <div>
+        <div class="box">
+            <h1>Happy birthday, my love.</h1>
+        </div>
+        <section class="above-fold">
+            <div class="wrap-present">
+              <div class="present-box" id="present">
+                <div class="present">
+                  <div class="img-wrap" id="present-image">
+                    
+                  </div>
+                </div>
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side left"></div>
+                <div class="side right"></div>
+                <div class="side top">
+                  <span class="to">
+                    <span class="name" id="nametag">
+                    </span>
+                  </span>
+                </div>
+                <div class="side bottom"></div>
+              </div>
+            </div>
+            <p class="info-text">Click to box</p>
+          </section>
+          <div id="card">
+            <h4>💘Em yêu💘</h4>
+            <img class="img" src="anh3.jpg">
+            <h4>Chúc mừng sinh nhật vợ yêu 🎂🎂Sinh nhật em ,Anh chúc em thật nhiều niềm vui, sức khỏe, lúc nào cũng xinh đẹp 😘😘😘Tuổi mới chăm học hơn, ăn nhiều lên nha chưa béo đâu ạ, chăm tập thể dục hơn😋😋,càng ngày càng xinh và yêu chồng nhiều hơn nữa nha 😍😍😍Chồng yêu vợ nhất, chụt chụt ❤️❤️❤️HAPPY BIRTHDAY vợ yêu💝💝💝</h4>
+          </div>
+<div class="pyro"><div class="before"></div><div class="after"></div></div>
+
+</div>
+    <script>
+        document.addEventListener('mousemove', function(e){
+            let body = document.querySelector('body');
+            let heart = document.createElement('span')
+            let x = e.offsetX;
+            let y = e.offsetY;
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+
+            let size = Math.random()*80;
+            heart.style.width = 20 + size+'px';
+            heart.style.height = 20 + size+'px';
+
+            let transformValue = Math.random()*360;
+            heart.style.transform = 'rotate('+ transformValue+'deg)'
+
+            body.appendChild(heart);
+            setTimeout(function(){
+                heart.remove()
+            }, 1000);
+        })
+    </script>
+    <script src="present.js"></script>
+</body>
+</html>
